@@ -1,0 +1,22 @@
+#!/usr/bin/env groovy
+// see https://jenkins.io/doc/book/pipeline/syntax/
+
+pipeline {
+
+    agent any
+
+    tools {
+        maven "mvn"
+    }
+
+    stages {
+	    stage 'Checkout'
+ 	       {
+  	        deleteDir()
+  	        checkout scm
+               }
+
+           }
+        }
+
+
